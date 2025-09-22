@@ -1,5 +1,5 @@
 <script setup>
-
+  const archivoUrl = `${import.meta.env.BASE_URL}Cobblemon%20Chunni%20V6.mrpack`
 </script>
 
 <template>
