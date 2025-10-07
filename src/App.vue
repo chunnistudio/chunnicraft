@@ -1,5 +1,5 @@
 <script setup>
-  const archivoUrl = '/Cobblemon%20Chunni%201.0.0.mrpack'
+  const archivoUrl = '/Cobblemon%20Chunni%201.1-fix.mrpack'
 </script>
 
 <template>
