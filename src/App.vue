@@ -31,6 +31,12 @@
 
     </div>
   </main>
+
+  <footer>
+    <div id="f-container">
+      <p>Creado por <a href="https://harpuia.me" target="_blank">Harpuia</a> :)</p>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
