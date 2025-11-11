@@ -1,3 +1,48 @@
 @import './base.css';
 
 
+#h-container {
+    text-align: center;
+    background-image: url('../../public/img/bg2.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+#m-container {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.icon-button {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.icon-button:active {
+  transform: scale(0.9);
+}
+
+#ip-address {
+    height: 20px;
+    padding-left: 5px;
+    background-color: #000;
+    color: #42b983;
+    border: 3px solid #42b983;
+    border-radius: 6px;
+    cursor:pointer;
+    transition: transform 0.1s ease;
+}
+
+#ip-address:active {
+  transform: scale(0.95);
+}
+
+#ip-address:focus {
+  outline: none; 
+  box-shadow: none;
+  border-color: #42b983;   
+  background-color: #000;  
+}
