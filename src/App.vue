@@ -1,5 +1,5 @@
 <script setup>
-  const archivoUrl = '/Cobblemon%20Chunni%201.3.mrpack'
+  const archivoUrl = '/Cobblemon%20Chunni%201.3.2.mrpack'
 
   function copyToClipboard(text) {
 
