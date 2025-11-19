@@ -51,6 +51,7 @@
   background-color: #000;
   border: 3px solid #42b983;
   border-radius: 6px;
+  width: 100%;
 }
 
 .click-title {

@@ -49,7 +49,23 @@
     </div>
 
     <div class="element">
-      <h2 class="click-title">Lista de Mods y datapacks</h2>
+      <h2>Changelog</h2>
+      
+      <div class="list-container">
+        <ul>
+          <li>
+            <h3>1.4.3 (2025-11-19)</h3>
+            <ul>
+                <li>: Se añade <a href="https://modrinth.com/datapack/allthemons-x-mega-showdown-legacy">AllTheMons x Mega Showdown v2.9.0</a></li>
+                <li>Se actualiza el resto de mods</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="element">
+      <h2>Lista de Mods y datapacks</h2>
       <div id="modlist" class="list-container">
         <ul>
           <template v-for="mod in mods">
