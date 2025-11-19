@@ -56,7 +56,7 @@
           <li>
             <h3>1.4.3 (2025-11-19)</h3>
             <ul>
-                <li>: Se añade <a href="https://modrinth.com/datapack/allthemons-x-mega-showdown-legacy">AllTheMons x Mega Showdown v2.9.0</a></li>
+                <li>Se añade <a href="https://modrinth.com/datapack/allthemons-x-mega-showdown-legacy">AllTheMons x Mega Showdown v2.9.0</a></li>
                 <li>Se actualiza el resto de mods</li>
             </ul>
           </li>
