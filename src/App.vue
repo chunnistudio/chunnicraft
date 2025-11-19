@@ -21,7 +21,7 @@
   }
 
   function trimName(name) {
-    return name.replace(/^mods\//, '').replace(/\.jar$/, '').replace(/^datapacks\//, '')
+    return name.replace(/^mods\//, '').replace(/\.jar$/, '').replace(/^datapacks\//, '').replace(/\.zip$/, '').replace(/^resourcepacks\//, '')
   }
 
 </script>
