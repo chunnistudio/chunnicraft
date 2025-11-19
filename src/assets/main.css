@@ -46,3 +46,13 @@
   border-color: #42b983;   
   background-color: #000;  
 }
+
+.list-container {
+  background-color: #000;
+  border: 3px solid #42b983;
+  border-radius: 6px;
+}
+
+.click-title {
+  cursor: pointer;
+}

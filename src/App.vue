@@ -1,9 +1,27 @@
 <script setup>
-  const archivoUrl = '/Cobblemon%20Chunni%201.3.2.mrpack'
+  import { ref, onMounted } from 'vue'
+
+  const archivoUrl = '/Cobblemon%20Chunni%201.4.3.mrpack'
+  const json = '/mods.json'
+
+  const mods = ref([])
+
+  onMounted(async () => {
+    try {
+      const response = await fetch(json)
+      if (!response.ok) throw new Error('Error al cargar mods.json')
+      mods.value = await response.json()
+    } catch (error) {
+      console.error(error)
+    }
+  })
 
   function copyToClipboard(text) {
-
     navigator.clipboard.writeText(document.getElementById(text).value)
+  }
+
+  function trimName(name) {
+    return name.replace(/^mods\//, '').replace(/\.jar$/, '')
   }
 
 </script>
@@ -24,11 +42,23 @@
         <font-awesome-icon icon="fa-regular fa-copy" class="icon-button" style="cursor:pointer" @click="copyToClipboard('ip-address')" />
       </div>
 
-      <p>Version: 1.21.1</p>
+      <p>Version de Minecraft: 1.21.1</p>
       <p>Plataforma de mods: <a href="https://modrinth.com/" target="_blank" rel="noopener">Modrinth</a></p>
-      <p>Modpack Versión 1.3.2: <a :href="archivoUrl" target="_blank" rel="noopener" style="cursor:pointer">Chunnicraft</a></p>
+      <p>Modpack Versión 1.4.3: <a :href="archivoUrl" target="_blank" rel="noopener" style="cursor:pointer">Chunnicraft</a></p>
       <p>Mapa del server: <a href="https://mcmap.chunni.studio/" target="_blank" rel="noopener">Ver Mapa</a></p>
+    </div>
 
+    <div class="element">
+      <h2 class="click-title">Lista de Mods y datapacks</h2>
+      <div id="modlist" class="list-container">
+        <ul>
+          <template v-for="mod in mods">
+            <li>
+              <a :href="mod.downloads[0]" target="_blank" rel="noopener" style="cursor:pointer">{{ trimName(mod.path) }}</a>
+            </li>
+          </template>
+        </ul>
+      </div>
     </div>
   </main>
 
