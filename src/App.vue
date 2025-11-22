@@ -1,7 +1,7 @@
 <script setup>
   import { ref, onMounted } from 'vue'
 
-  const archivoUrl = '/Cobblemon%20Chunni%201.4.3.mrpack'
+  const archivoUrl = '/Cobblemon%20Chunni%201.4.5.mrpack'
   const json = '/mods.json'
 
   const mods = ref([])
@@ -44,7 +44,7 @@
 
       <p>Version de Minecraft: 1.21.1</p>
       <p>Plataforma de mods: <a href="https://modrinth.com/" target="_blank" rel="noopener">Modrinth</a></p>
-      <p>Modpack Versión 1.4.3: <a :href="archivoUrl" target="_blank" rel="noopener" style="cursor:pointer">Chunnicraft</a></p>
+      <p>Modpack Versión 1.4.5: <a :href="archivoUrl" target="_blank" rel="noopener" style="cursor:pointer">Chunnicraft</a></p>
       <p>Mapa del server: <a href="https://mcmap.chunni.studio/" target="_blank" rel="noopener">Ver Mapa</a></p>
     </div>
 
@@ -53,6 +53,17 @@
       
       <div class="list-container">
         <ul>
+          <li>
+            <h3>1.4.5 (2025-11-22)</h3>
+            <ul>
+                <li>Se actualiza datapack <a href="https://modrinth.com/datapack/allthemons-x-mega-showdown-legacy">AllTheMons x Mega Showdown v2.9.0</a></li>
+                <li>Se actualiza mod <a href="https://modrinth.com/mod/rctmod">Radical Cobblemon Trainers 0.16.11-beta</a></li>
+                <li>Se actualiza mod <a href="https://modrinth.com/mod/cobblemon-armors">Cobblemon Armors 1.5.2+1.7.0</a></li>
+                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/legendary-monuments"></a>Cobblemon: Legendary Monuments 7.2</li>
+                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/resourceful-lib">Resourceful Lib 3.0.12</a></li>
+                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/chipped">Chipped 4.0.2</a></li>
+            </ul>
+          </li> 
           <li>
             <h3>1.4.3 (2025-11-19)</h3>
             <ul>
