@@ -4,16 +4,20 @@
   const archivoUrl = '/Cobblemon%20Chunni%201.4.5.mrpack'
   const json = '/mods.json'
 
-  const mods = ref([])
+  const jsonList = ref([])
+  let mods, datapacks, resourcepacks;
 
   onMounted(async () => {
     try {
       const response = await fetch(json)
       if (!response.ok) throw new Error('Error al cargar mods.json')
-      mods.value = await response.json()
+      json.value = await response.json()
     } catch (error) {
       console.error(error)
     }
+    mods = json.value.filter(item => item.path.startsWith('mods/'))
+    datapacks = json.value.filter(item => item.path.startsWith('datapacks/'))
+    resourcepacks = json.value.filter(item => item.path.startsWith('resourcepacks/'))
   })
 
   function copyToClipboard(text) {
