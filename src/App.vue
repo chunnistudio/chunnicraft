@@ -4,20 +4,23 @@
   const archivoUrl = '/Cobblemon%20Chunni%201.4.5.mrpack'
   const json = '/mods.json'
 
-  const jsonList = ref([])
-  let mods, datapacks, resourcepacks;
+const jsonList = ref([])
+let mods = ref([])
+let datapacks = ref([])
+let resourcepacks = ref([])
+
 
   onMounted(async () => {
     try {
       const response = await fetch(json)
       if (!response.ok) throw new Error('Error al cargar mods.json')
-      json.value = await response.json()
+      jsonList.value = await response.json()
     } catch (error) {
       console.error(error)
     }
-    mods = json.value.filter(item => item.path.startsWith('mods/'))
-    datapacks = json.value.filter(item => item.path.startsWith('datapacks/'))
-    resourcepacks = json.value.filter(item => item.path.startsWith('resourcepacks/'))
+    mods.value = jsonList.value.filter(item => item.path.startsWith('mods/'))
+    datapacks.value = jsonList.value.filter(item => item.path.startsWith('datapacks/'))
+    resourcepacks = jsonList.value.filter(item => item.path.startsWith('resourcepacks/'))
   })
 
   function copyToClipboard(text) {
@@ -79,16 +82,45 @@
       </div>
     </div>
 
-    <div class="element">
-      <h2>Lista de Mods y datapacks</h2>
-      <div id="modlist" class="list-container">
-        <ul>
+    <div class="element-list">
+      
+      <div id="modlist" class="list-container list-container2">
+        <h2>Lista de Mods</h2>
+        <div class="list-block">
+          <ul>
           <template v-for="mod in mods">
-            <li>
+            <li>  
               <a :href="mod.downloads[0]" target="_blank" rel="noopener" style="cursor:pointer">{{ trimName(mod.path) }}</a>
             </li>
           </template>
         </ul>
+        </div>
+      </div>
+
+      <div id="datapackslist" class="list-container list-container2">
+        <h2>Lista de Datapacks</h2>
+        <div class="list-block">
+          <ul>
+          <template v-for="mod in datapacks">
+            <li>  
+              <a :href="mod.downloads[0]" target="_blank" rel="noopener" style="cursor:pointer">{{ trimName(mod.path) }}</a>
+            </li>
+          </template>
+        </ul>
+        </div>
+      </div>
+
+      <div id="resourcepackslist" class="list-container list-container2">
+        <h2>Lista de Resourcepacks</h2>
+        <div class="list-block">
+          <ul>
+          <template v-for="mod in resourcepacks">
+            <li>  
+              <a :href="mod.downloads[0]" target="_blank" rel="noopener" style="cursor:pointer">{{ trimName(mod.path) }}</a>
+            </li>
+          </template>
+        </ul>
+        </div>
       </div>
     </div>
   </main>
