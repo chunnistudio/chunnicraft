@@ -1,7 +1,7 @@
 <script setup>
   import { ref, onMounted } from 'vue'
 
-  const archivoUrl = '/Cobblemon%20Chunni%201.4.5.mrpack'
+  const archivoUrl = '/Cobblemon%20Chunni%201.5.0.mrpack'
   const json = '/mods.json'
 
 const jsonList = ref([])
@@ -61,14 +61,24 @@ let resourcepacks = ref([])
       <div class="list-container">
         <ul>
           <li>
+            <h3>1.5.0 (2025-27-12)</h3>
+            <ul>
+              <li>Se actualiza Cobblemon a la versión 1.7.1 - Pueden revisar lo que trae esta versión <a href="https://wiki.cobblemon.com/index.php/1.7.0" target="_blank">aquí</a></li>
+              <li>Se quita el mod: Cobblemon: Ride on! por no ser compatible con Cobblemon 1.7.x</li>
+              <li>Se quita el mod: Cobblemon Capture XP por no ser compatible con Cobblemon 1.7.x - Parece estar abandonado</li>
+              <li>Se quita el mod: Cobblemon - Dex Rewards por no ser compatible con Cobblemon 1.7.x</li>
+              <li>De parte de todo el Staff de Chunni Studio, les deseamos que hayan pasado una feliz navidad y que pasen un feliz año nuevo (●´∀｀●)</li>
+            </ul>
+          </li>
+          <li>
             <h3>1.4.5 (2025-11-22)</h3>
             <ul>
-                <li>Se actualiza datapack <a href="https://modrinth.com/datapack/allthemons-x-mega-showdown-legacy">AllTheMons x Mega Showdown v2.9.0</a></li>
-                <li>Se actualiza mod <a href="https://modrinth.com/mod/rctmod">Radical Cobblemon Trainers 0.16.11-beta</a></li>
-                <li>Se actualiza mod <a href="https://modrinth.com/mod/cobblemon-armors">Cobblemon Armors 1.5.2+1.7.0</a></li>
-                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/legendary-monuments"></a>Cobblemon: Legendary Monuments 7.2</li>
-                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/resourceful-lib">Resourceful Lib 3.0.12</a></li>
-                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/chipped">Chipped 4.0.2</a></li>
+                <li>Se actualiza datapack <a href="https://modrinth.com/datapack/allthemons-x-mega-showdown-legacy" target="_blank">AllTheMons x Mega Showdown v2.9.0</a></li>
+                <li>Se actualiza mod <a href="https://modrinth.com/mod/rctmod" target="_blank">Radical Cobblemon Trainers 0.16.11-beta</a></li>
+                <li>Se actualiza mod <a href="https://modrinth.com/mod/cobblemon-armors" target="_blank">Cobblemon Armors 1.5.2+1.7.0</a></li>
+                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/legendary-monuments" target="_blank"></a>Cobblemon: Legendary Monuments 7.2</li>
+                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/resourceful-lib" target="_blank">Resourceful Lib 3.0.12</a></li>
+                <li>Se añade dependencia de Cobblemon: Legendary Monuments <a href="https://modrinth.com/mod/chipped" target="_blank">Chipped 4.0.2</a></li>
             </ul>
           </li> 
           <li>
